@@ -17,16 +17,18 @@ function petName(){
         species: species,
     }
 
-    pets. PushManager(pet)
+    pets.push(pet)
 }
 
 function showPets() {
+    // for .. of loop to go through the array one by one
+    for (let currentPet of pets)
     alert(pet.name)
 
 }
 
 function removePet(){
-
+}
  
 
 
