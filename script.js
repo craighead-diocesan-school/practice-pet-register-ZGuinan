@@ -19,6 +19,13 @@ function addPet(){
     let age = prompt('What is ' + name + "'s age?")
     let species = prompt("What species is " + name + '?')
 
+ // check that the input is valid
+ if (name.test(/[a-zA-Z0-9]+/) && 
+     age.test(/^(0?[1-9]|[1-9][0-9])$/) && 
+     species.test(/\b[A-Za-z]+\b/)) {
+
+ }
+
  // create a pet object with the details
     let pet = {
         name: name,
@@ -28,7 +35,11 @@ function addPet(){
 
  // add a pet object to pets array
     pets.push(pet)
-}
+   } else { 
+   alert('The pet details are not valid.')
+ }
+
+
 
 function removePet() {
  // output the names of each pet
@@ -61,7 +72,7 @@ function searchPet() {
 
  // output whether the search found the pet or not
  if (searchresult == true) {
-    alert('Found the pet!')
+    alert('Pet has been found!')
  } else {
     alert('Pet not found.')
  }
