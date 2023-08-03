@@ -21,8 +21,8 @@ function addPet(){
 
  // check that the input is valid
  if (name.test(/[a-zA-Z0-9]+/) && 
-     age.test(/^(0?[1-9]|[1-9][0-9])$/) && 
-     species.test(/\b[A-Za-z]+\b/)) {
+     age.test(/^(1[0-9]|[2-9][0-9]|100)$/) && 
+     species.test(/^[a-zA-Z]+$/)) {
 
  }
 
@@ -58,7 +58,7 @@ function removePet() {
 
 function searchPet() {
  // get the name of the pet to search for
- let petToSearchFor = prompt('What is the name of the pet you want to find?')
+ let petToSearchFor = prompt('What is the name of the pet you would like to find?')
 
  // create a variable to store whether we found it or not (haven't yet)
  let searchResult = false
